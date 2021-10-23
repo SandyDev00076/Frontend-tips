@@ -1,5 +1,25 @@
+@use "../styles/shared";
+
 .container {
-  background-color: hsl(0, 0%, 6%);
-  color: white;
-  min-height: 100vh;
+  @extend %page;
+}
+
+.intro {
+  margin-bottom: 32px;
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    strong {
+      color: white;
+    }
+  }
+}
+
+.genres {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
 }

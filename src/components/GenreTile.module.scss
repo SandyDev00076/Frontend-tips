@@ -1,6 +1,31 @@
 .container {
-  padding: 16px;
+  padding: 20px 16px;
   border-radius: 10px;
   font-weight: bold;
   font-size: 1.2rem;
+  color: var(--text);
+}
+
+.variant1 {
+  background: linear-gradient(
+    135deg,
+    var(--tile-color-1),
+    var(--tile-color-1-tint)
+  );
+}
+
+.variant2 {
+  background: linear-gradient(
+    135deg,
+    var(--tile-color-2),
+    var(--tile-color-2-tint)
+  );
+}
+
+.variant3 {
+  background: linear-gradient(
+    135deg,
+    var(--tile-color-3),
+    var(--tile-color-3-tint)
+  );
 }

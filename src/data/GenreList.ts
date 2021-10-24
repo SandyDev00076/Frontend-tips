@@ -9,4 +9,8 @@ export const genreList: Genre[] = [
     id: "images",
     title: "Images",
   },
+  {
+    id: "Illustrations",
+    title: "Illustrations",
+  },
 ];

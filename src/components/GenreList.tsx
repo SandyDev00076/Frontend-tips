@@ -5,28 +5,28 @@ import { motion } from "framer-motion";
 
 import styles from "./GenreList.module.scss";
 
-const popFromLeft = {
-  initial: {
-    opacity: 0,
-    x: -20,
-  },
-  animate: {
-    opacity: 1,
-    x: 0,
-  },
-};
+function popFromLeftWithDelay(delay: number) {
+  return {
+    initial: {
+      opacity: 0,
+      x: -20,
+    },
+    animate: {
+      opacity: 1,
+      x: 0,
+    },
+    transition: {
+      delay,
+    },
+  };
+}
 
 const GenreList = () => {
   return (
     <section className={styles.container}>
       <div className={styles.intro}>
-        <motion.h1 {...popFromLeft}>need some help?</motion.h1>
-        <motion.h2
-          {...popFromLeft}
-          transition={{
-            delay: 0.4,
-          }}
-        >
+        <motion.h1 {...popFromLeftWithDelay(0.4)}>need some help?</motion.h1>
+        <motion.h2 {...popFromLeftWithDelay(0.8)}>
           Pick a <strong>Genre</strong>
         </motion.h2>
       </div>

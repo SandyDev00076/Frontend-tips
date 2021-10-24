@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Genre } from "types/Genre";
-import { getRandomArbitrary } from "utils";
 
 import styles from "./GenreTile.module.scss";
 

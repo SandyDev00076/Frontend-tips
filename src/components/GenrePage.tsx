@@ -1,10 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { popFromLeftWithDelay } from "utils";
+import { getGenreLinks } from "data/GenreLinks";
+import { useParams } from "react-router";
 
 import styles from "./GenrePage.module.scss";
 
 const GenrePage = () => {
+  const { id } = useParams<{
+    id: string;
+  }>();
+  const links = getGenreLinks(id);
   return (
     <section className={styles.container}>
       <div className={styles.intro}>

@@ -1,0 +1,43 @@
+@use "../styles/shared";
+
+.container {
+  @extend %page;
+  display: grid;
+  place-items: center;
+}
+
+.iconContainer {
+  background-color: var(--bg);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+  margin-bottom: 16px;
+
+  svg {
+    fill: white;
+    width: 36px;
+    height: auto;
+  }
+}
+
+.panel {
+  padding: 32px;
+  border-radius: 10px;
+  background: linear-gradient(
+    135deg,
+    var(--tile-color-5),
+    var(--tile-color-5-tint)
+  );
+
+  h1 {
+    color: var(--text);
+  }
+
+  h2 {
+    font-size: 1rem;
+    color: var(--text);
+  }
+}

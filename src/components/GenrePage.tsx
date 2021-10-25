@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { popFromLeftWithDelay } from "utils";
 import { getGenreLinks } from "data/GenreLinks";
 import { useParams } from "react-router";
+import NoGenreFound from "./NoGenreFound";
 
 import styles from "./GenrePage.module.scss";
 
@@ -11,6 +12,8 @@ const GenrePage = () => {
     id: string;
   }>();
   const links = getGenreLinks(id);
+  if (links === undefined) return <NoGenreFound />;
+  console.log(links);
   return (
     <section className={styles.container}>
       <div className={styles.intro}>

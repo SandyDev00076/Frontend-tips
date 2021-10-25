@@ -1,0 +1,9 @@
+@use "../styles/shared";
+
+.container {
+  @extend %page;
+}
+
+.intro {
+  @extend %pageIntro;
+}

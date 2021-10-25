@@ -5,18 +5,7 @@
 }
 
 .intro {
-  margin-bottom: 32px;
-  h1 {
-    font-size: 1.2rem;
-  }
-
-  strong {
-    color: white;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
+  @extend %pageIntro;
 }
 
 .genres {

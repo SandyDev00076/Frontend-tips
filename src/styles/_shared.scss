@@ -5,6 +5,21 @@
   padding: 32px 20%;
 }
 
+%pageIntro {
+  margin-bottom: 32px;
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  strong {
+    color: white;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
 @media screen and (max-width: 860px) {
   %page {
     padding: 32px 10%;

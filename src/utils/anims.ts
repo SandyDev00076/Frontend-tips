@@ -23,7 +23,7 @@ export function getVariants(index: number, focused: boolean) {
       },
     },
     focus: {
-      filter: focused ? "brightness(0.9)" : "unset",
+      filter: focused ? "brightness(0.9)" : "brightness(1)",
     },
   };
 }

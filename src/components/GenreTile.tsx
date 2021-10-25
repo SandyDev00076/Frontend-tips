@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Genre } from "types/Genre";
 import { NO_OF_VARIANTS } from "App.constants";
 import { Link } from "react-router-dom";
+import { getVariants } from "utils";
 
 import styles from "./GenreTile.module.scss";
 
@@ -14,17 +15,7 @@ interface Props {
 const GenreTile = ({ obj, index }: Props) => {
   const [focused, setFocused] = useState(false);
 
-  const variants = {
-    appear: {
-      opacity: 1,
-      transition: {
-        delay: 0.3 * index + 1.2,
-      },
-    },
-    focus: {
-      filter: focused ? "brightness(0.9)" : "unset",
-    },
-  };
+  const variants = getVariants(index, focused);
 
   const variantNumber = (index % NO_OF_VARIANTS) + 1;
   return (

@@ -9,5 +9,7 @@ export const genreList: Genre[] = createGenreDataEntryArray(
   "CSS",
   "Prototyping",
   "Design Systems",
-  "Inspiration"
+  "Inspiration",
+  "React",
+  "Angular"
 );

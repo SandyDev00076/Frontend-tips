@@ -1,1 +1,49 @@
 @import "colors";
+
+.variant1 {
+  background: linear-gradient(
+    135deg,
+    var(--tile-color-1),
+    var(--tile-color-1-tint)
+  );
+}
+
+.variant2 {
+  background: linear-gradient(
+    135deg,
+    var(--tile-color-2),
+    var(--tile-color-2-tint)
+  );
+}
+
+.variant3 {
+  background: linear-gradient(
+    135deg,
+    var(--tile-color-3),
+    var(--tile-color-3-tint)
+  );
+}
+
+.variant4 {
+  background: linear-gradient(
+    135deg,
+    var(--tile-color-4),
+    var(--tile-color-4-tint)
+  );
+}
+
+.variant5 {
+  background: linear-gradient(
+    135deg,
+    var(--tile-color-5),
+    var(--tile-color-5-tint)
+  );
+}
+
+.variant6 {
+  background: linear-gradient(
+    135deg,
+    var(--tile-color-6),
+    var(--tile-color-6-tint)
+  );
+}

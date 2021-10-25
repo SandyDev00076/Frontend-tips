@@ -2,30 +2,17 @@ import React from "react";
 import { genreList } from "data/GenreList";
 import GenreTile from "./GenreTile";
 import { motion } from "framer-motion";
+import { popFromLeftWithDelay } from "utils";
 
 import styles from "./GenreList.module.scss";
-
-function popFromLeftWithDelay(delay: number) {
-  return {
-    initial: {
-      opacity: 0,
-      x: -20,
-    },
-    animate: {
-      opacity: 1,
-      x: 0,
-    },
-    transition: {
-      delay,
-    },
-  };
-}
 
 const GenreList = () => {
   return (
     <section className={styles.container}>
       <div className={styles.intro}>
-        <motion.h1 {...popFromLeftWithDelay(0.4)}>need some help?</motion.h1>
+        <motion.h1 {...popFromLeftWithDelay(0.4)}>
+          need some help in <strong>Frontend</strong> ?
+        </motion.h1>
         <motion.h2 {...popFromLeftWithDelay(0.8)}>
           Pick a <strong>Genre</strong>
         </motion.h2>

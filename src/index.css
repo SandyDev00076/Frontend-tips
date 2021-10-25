@@ -36,3 +36,8 @@ button {
 button:focus {
   outline: none;
 }
+
+button,
+input {
+  font-family: inherit;
+}

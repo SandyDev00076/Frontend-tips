@@ -4,3 +4,15 @@
   min-height: 100vh;
   padding: 32px 20%;
 }
+
+@media screen and (max-width: 860px) {
+  %page {
+    padding: 32px 10%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  %page {
+    padding: 32px;
+  }
+}

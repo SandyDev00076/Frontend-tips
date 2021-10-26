@@ -4,9 +4,15 @@ const GenreLinks: { [k: string]: GenreLink[] } = {
   icons: [
     createGenreLink(
       "1",
-      "Material Icons",
+      "Material",
       "A complete set of all Material Icons",
       "https://material.io/resources/icons/"
+    ),
+    createGenreLink(
+      "2",
+      "FontAwesome",
+      "The world's most popular and easiest to use icon set just got an upgrade. More icons. More styles. More Options.",
+      "https://fontawesome.com/v6.0/icons"
     ),
   ],
   images: [
@@ -27,6 +33,14 @@ const GenreLinks: { [k: string]: GenreLink[] } = {
   angular: [],
 };
 
+/**
+ *
+ * @param id ID of the genre link
+ * @param title Title for the genre link
+ * @param description Description around the link
+ * @param link URL that needs to be accessed
+ * @returns A Genre link object
+ */
 export function createGenreLink(
   id: string,
   title: string,
@@ -41,6 +55,11 @@ export function createGenreLink(
   };
 }
 
+/**
+ *
+ * @param genre ID of the genre
+ * @returns Links associated with genre
+ */
 export function getGenreLinks(genre: string) {
   if (!Object.keys(GenreLinks).includes(genre)) return undefined;
   return GenreLinks[genre];

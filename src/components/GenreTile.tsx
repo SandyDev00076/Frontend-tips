@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import { Genre } from "types/Genre";
-import { NO_OF_VARIANTS } from "App.constants";
 import { Link } from "react-router-dom";
-import { getTileVariants } from "utils";
+import TileContainer from "./TileContainer";
 
 import styles from "./GenreTile.module.scss";
 
@@ -15,9 +13,6 @@ interface Props {
 const GenreTile = ({ obj, index }: Props) => {
   const [focused, setFocused] = useState(false);
 
-  const variants = getTileVariants(index, focused);
-
-  const variantNumber = (index % NO_OF_VARIANTS) + 1;
   return (
     <Link
       to={`genre/${obj.id}`}
@@ -25,19 +20,13 @@ const GenreTile = ({ obj, index }: Props) => {
       onFocus={() => setFocused(true)}
       onBlur={() => setFocused(false)}
     >
-      <motion.div
-        initial={{
-          opacity: 0,
-        }}
-        variants={variants}
-        animate={["appear", "focus"]}
-        whileHover={{
-          y: -3,
-        }}
-        className={`${styles.container} variant${variantNumber}`}
+      <TileContainer
+        tileIndex={index}
+        className={styles.container}
+        focused={focused}
       >
         {obj.title}
-      </motion.div>
+      </TileContainer>
     </Link>
   );
 };

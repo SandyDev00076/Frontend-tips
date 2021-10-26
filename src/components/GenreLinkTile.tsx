@@ -1,26 +1,26 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { Genre } from "types/Genre";
 import { NO_OF_VARIANTS } from "App.constants";
-import { Link } from "react-router-dom";
-import { getTileVariants } from "utils";
+import { motion } from "framer-motion";
+import { GenreLink } from "types/GenreLink";
+import { getTileVariants, prepareURL, truncateURL } from "utils";
 
-import styles from "./GenreTile.module.scss";
+import styles from "./GenreLinkTile.module.scss";
 
 interface Props {
-  obj: Genre;
+  obj: GenreLink;
   index: number;
 }
-
-const GenreTile = ({ obj, index }: Props) => {
+const GenreLinkTile = ({ obj, index }: Props) => {
   const [focused, setFocused] = useState(false);
 
   const variants = getTileVariants(index, focused);
 
   const variantNumber = (index % NO_OF_VARIANTS) + 1;
   return (
-    <Link
-      to={`genre/${obj.id}`}
+    <a
+      href={prepareURL(obj.link)}
+      target="_blank"
+      rel="noopener noreferrer"
       className={styles.link}
       onFocus={() => setFocused(true)}
       onBlur={() => setFocused(false)}
@@ -36,10 +36,12 @@ const GenreTile = ({ obj, index }: Props) => {
         }}
         className={`${styles.container} variant${variantNumber}`}
       >
-        {obj.title}
+        <div className={styles.title}>{obj.title}</div>
+        <div className={styles.url}>{truncateURL(obj.link)}</div>
+        <div className={styles.desc}>{obj.description}</div>
       </motion.div>
-    </Link>
+    </a>
   );
 };
 
-export default GenreTile;
+export default GenreLinkTile;

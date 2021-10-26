@@ -1,4 +1,4 @@
-export { popFromLeftWithDelay, getVariants } from "./anims";
+export { popFromLeftWithDelay, getTileVariants } from "./anims";
 
 export function getRandomArbitrary(min: number, max: number) {
   min = Math.ceil(min);
@@ -19,4 +19,13 @@ export function createGenreDataEntry(genre: string) {
 
 export function createGenreDataEntryArray(...genres: string[]) {
   return genres.map((genre) => createGenreDataEntry(genre));
+}
+
+export function prepareURL(url: string) {
+  if (url.startsWith("https://") || url.startsWith("http://")) return url;
+  return `http://${url}`;
+}
+
+export function truncateURL(url: string) {
+  return url.replace(/(^\w+:|^)\/\//, "").replace(/\/$/, "");
 }

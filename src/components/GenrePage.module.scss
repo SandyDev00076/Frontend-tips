@@ -7,3 +7,7 @@
 .intro {
   @extend %pageIntro;
 }
+
+.genreLinks {
+  @extend %tileLayout;
+}

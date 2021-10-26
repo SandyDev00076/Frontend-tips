@@ -1,0 +1,25 @@
+.container {
+  padding: 16px;
+  border-radius: 10px;
+  color: var(--text);
+  width: 100%;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.url {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.desc {
+  font-size: 0.9rem;
+}

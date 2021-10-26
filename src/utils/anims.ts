@@ -14,7 +14,7 @@ export function popFromLeftWithDelay(delay: number) {
   };
 }
 
-export function getVariants(index: number, focused: boolean) {
+export function getTileVariants(index: number, focused: boolean) {
   return {
     appear: {
       opacity: 1,

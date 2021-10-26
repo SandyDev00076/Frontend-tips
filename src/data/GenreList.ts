@@ -13,3 +13,7 @@ export const genreList: Genre[] = createGenreDataEntryArray(
   "React",
   "Angular"
 );
+
+export function getGenreByID(id: string) {
+  return genreList.find((item) => item.id === id);
+}

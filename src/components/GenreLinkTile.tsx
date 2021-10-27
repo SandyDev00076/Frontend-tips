@@ -28,7 +28,6 @@ const GenreLinkTile = ({ obj, index }: Props) => {
       >
         <div className={styles.title}>{obj.title}</div>
         <div className={styles.url}>{truncateURL(obj.link)}</div>
-        <div className={styles.desc}>{obj.description}</div>
       </TileContainer>
     </a>
   );

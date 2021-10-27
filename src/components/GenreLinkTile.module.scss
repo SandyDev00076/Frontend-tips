@@ -26,18 +26,3 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-
-.desc {
-  z-index: 2;
-  font-size: 0.8rem;
-  position: absolute;
-  background-color: white;
-  color: var(--text);
-  top: 70%;
-  left: 8px;
-  right: 8px;
-  margin: 0 auto;
-  padding: 16px;
-  border-radius: 10px;
-  box-shadow: 0 0 40px var(--bg);
-}

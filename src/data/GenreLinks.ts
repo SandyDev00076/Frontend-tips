@@ -5,7 +5,7 @@ const GenreLinks: { [k: string]: GenreLink[] } = {
     createGenreLink(
       "1",
       "Material",
-      "A complete set of all Material Icons",
+      "A complete set of all Material Icons.",
       "https://material.io/resources/icons/"
     ),
     createGenreLink(
@@ -13,6 +13,18 @@ const GenreLinks: { [k: string]: GenreLink[] } = {
       "FontAwesome",
       "The world's most popular and easiest to use icon set just got an upgrade. More icons. More styles. More Options.",
       "https://fontawesome.com/v6.0/icons"
+    ),
+    createGenreLink(
+      "3",
+      "FlatIcon",
+      "The largest database of icons available in PNG, SVG, EPS, PSD and BASE 64 formats.",
+      "https://www.flaticon.com/icons"
+    ),
+    createGenreLink(
+      "4",
+      "Simple Icons",
+      "2070 Free SVG icons for popular brands.",
+      "https://simpleicons.org/"
     ),
   ],
   images: [
